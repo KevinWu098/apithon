@@ -33,9 +33,10 @@ const QUESTIONS = [
 const IMAGES = [
     "https://staticg.sportskeeda.com/editor/2022/04/39c84-16490363904196-1920.jpg?w=840",
     "https://oyster.ignimgs.com/mediawiki/apis.ign.com/minecraft/4/4e/Minecraft_Pig_LG.png",
-    "https://static.wikia.nocookie.net/explodingtnt/images/3/33/IMG_0793.PNG/revision/latest/scale-to-width/360?cb=20180820045112",
+    "https://i.pinimg.com/736x/3c/f5/61/3cf5616b310c3ed73f10814be64222c1.jpg",
     "https://assetsio.reedpopcdn.com/minecraft-caves-and-cliffs-update.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
     "https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/buzzy-bees.jpg",
+    "https://cdn.vox-cdn.com/thumbor/B7cSZLSab1ZHUBXdcXzoXRJdWX0=/0x0:854x505/1200x800/filters:focal(394x186:530x322)/cdn.vox-cdn.com/uploads/chorus_image/image/68563064/bd0ea75cd9da517467cc637efb30950f_videocover.0.jpg",
 ];
 
 export default function Home() {
@@ -93,31 +94,30 @@ export default function Home() {
                         "--image-url": `url('minecraft.webp')`,
                     } as any
                 }
-                className="text-6xl font-bold bg-[image:var(--image-url)] absolute top-36"
+                className="text-6xl font-bold bg-[image:var(--image-url)]"
             >
                 What Minecraft Mob Are U?
             </h1>
 
             {num > 4 ? (
-                <>
-                    <h2 className="text-5xl">YOU ARE A...</h2>
-                    <div className="w-80 h-80">
+                <div className="pt-24 space-y-8">
+                    <h2 className="text-5xl text-center">YOU ARE A...</h2>
+                    <div className="w-[1000px] h-[500px]">
                         <img
-                            className="w-80 h-80 bg-cover"
-                            src={IMAGES[Math.floor(Math.random() * 4)]}
-                            alt="Mob"
+                            className="w-[1000px] h-[500px] bg-cover"
+                            src={IMAGES[Math.floor(Math.random() * 6)]}
+                            alt="wb"
                         />
                     </div>
-                    <p>{mobImage}</p>
-                </>
+                </div>
             ) : (
-                <div className="flex-center flex-col gap-y-8">
+                <div className="flex-center flex-col gap-y-10 pt-24">
                     <p className="flex-center text-center">
                         {QUESTIONS[num].question}
                     </p>
                     <RadioGroup
                         defaultValue="n"
-                        className="flex flex-row gap-x-4"
+                        className="flex flex-row gap-x-6"
                     >
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem
