@@ -1,5 +1,5 @@
 # apithon
-> ### very chill @jaslavie
+> ### very chill minecraft personality test
 
 ## Contains:
 <p align="center">
